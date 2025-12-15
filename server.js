@@ -21,6 +21,7 @@ try {
 
 app.use(express.json())
 app.use(cors())
+app.use(express.static('teste'))
 
 app.use('/api/characters', characterRouter)
 app.use('/api/lightcones', lightconeRouter)
