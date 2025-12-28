@@ -5,7 +5,7 @@ const fs = require('fs')
 router.get('/:folder/:image', async (req, res) => {
   let folder = req.params.folder, image = req.params.image
 
-  if (!['characters', 'lightcones', 'planarOrnaments', 'relics'].includes(folder)) {
+  if (!['characters', 'lightcones', 'planarOrnaments', 'relics', 'misc'].includes(folder)) {
     res.status(400).send({ error: 'Invalid folder name.' })
     return
   }

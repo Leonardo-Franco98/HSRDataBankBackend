@@ -3,7 +3,7 @@ const Lightcone = require('../models/lightcone')
 
 router.get('/', async (req, res) => {
   try {
-    let result = await Lightcone.find({}).select(['id', 'name', 'path', 'rarity', 'stats'])
+    let result = await Lightcone.find({}).select(['id', 'name', 'path', 'rarity', 'effect', 'superImpositions'])
 
     res.status(200).send(result)
   } catch (e) {
